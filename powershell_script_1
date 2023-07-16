@@ -1,0 +1,10 @@
+# This script has been checked in Windows 10 and my kali linux, it is valid
+
+$image = "https://raw.githubusercontent.com/ghzya/caracal/main/caracal.jpg"
+$tempPath = [System.IO.path]::GetTempPath()
+$path = $tempPath + "\caracal.jpg"
+
+Invoke-WebRequest -URI $image -OutFile $path;
+Invoke-Item -Path $path;
+
+
